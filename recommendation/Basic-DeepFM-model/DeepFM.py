@@ -90,7 +90,7 @@ class DeepFM(BaseEstimator, TransformerMixin):
             self.squared_features_emb = tf.square(self.embeddings)
             self.squared_sum_features_emb = tf.reduce_sum(self.squared_features_emb, 1)  # None * K
 
-            #second order
+            # second order
             self.y_second_order = 0.5 * tf.subtract(self.summed_features_emb_square,self.squared_sum_features_emb)
             self.y_second_order = tf.nn.dropout(self.y_second_order,self.dropout_keep_fm[1])
 

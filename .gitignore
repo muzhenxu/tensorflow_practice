@@ -55,6 +55,7 @@ model/
 */data/
 */graphs/
 
+.*
 
 *.pkl
 
